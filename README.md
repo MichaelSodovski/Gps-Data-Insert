@@ -14,7 +14,7 @@ This service is designed to continuously simulate and insert GPS data into an Or
 
 ## Technical Details
 
-- **.NET Version**: The application is built using .NET 7.
+- **.NET Version**: The application is built using .NET 7.0
 - **Database**: Oracle Database. 
 - **ORM**: Direct SQL commands with parameters to prevent SQL injection.
 
