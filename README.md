@@ -5,7 +5,6 @@
 This service is designed to continuously simulate and insert GPS data into an Oracle database. The service simulates the generation of GPS coordinates within predefined bounds and inserts this data at regular intervals, making it useful for testing and development purposes where mock GPS data is required.
 
 ## Features
-
 - **Continuous Data Simulation**: Generates and inserts 65 GPS data points in each iteration, simulating real-time data.
 - **Database Integration**: Utilizes Oracle's managed data access to interact with an Oracle database.
 - **Performance Metrics**: Measures and logs the time taken for each insertion operation.
@@ -13,10 +12,11 @@ This service is designed to continuously simulate and insert GPS data into an Or
 - **Error Handling**: Catches and logs database operation exceptions to ensure service continuity.
 
 ## Technical Details
-
-- **.NET Version**: The application is built using .NET 7.0
-- **Database**: Oracle Database. 
-- **ORM**: Direct SQL commands with parameters to prevent SQL injection.
+- **.NET Version**: The application is built using .NET 7.0.
+- **Database**: Oracle Database.
+- **Data Access**: This service requires the ODP.NET Core driver provided by Oracle for database operations. The `Oracle.ManagedDataAccess.Core` library must be installed to facilitate the connection and interaction with Oracle databases, ensuring secure and efficient data manipulation.
+- **ORM**: Uses direct SQL commands with parameters to mitigate SQL injection risks. It is important to have the ODP.NET Core driver installed for the application to function correctly, as it is the backbone for executing database operations within a .NET Core environment.
+ 
 
 ## Background Task
 
